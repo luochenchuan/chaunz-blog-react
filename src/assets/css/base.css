@@ -1,0 +1,26 @@
+/**
+  * Created by IntelliJ IDEA.
+  * User: zhuchuansheng
+  * Date: 2020/6/5
+  * Time: 12:50
+  * Describe: 主体的样式控制
+  */
+html, body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
