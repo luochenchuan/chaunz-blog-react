@@ -5,41 +5,37 @@
   * Time: 12:50
   * Describe:
   */
-.my-card-box{
-  width: auto;
-  height: 180px;
-  list-style: none;
-  border: #1890ff solid 1px;
-}
-.my-card-item{
-  width: 200px;
-  height: 120px;
-  border: rgba(0, 0, 0, 0.1) solid 1px;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.my-card-item:hover{
-  border: rgba(255, 255, 255, 0.5) solid 1px;
-}
-.my-card-img{
-  width: 50%;
-  height: 100%;
-  float: left;
-  border-radius: 5px;
-}
-.my-card-text{
-  width: 50%;
-  float: left;
-  padding: 10% 0;
+.MyCard{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #1890ff;
   text-align: center;
+  font-size: 16px;
 }
-.my-card-text>a, .my-card-text>p{
+.MyCard>a{
   text-decoration: none;
   color: white;
-  font-size: 18px;
-  line-height: 2;
 }
-.my-card-text>p{
-  font-size: 12px;
+.MyCard>a:hover{
+  color: darkblue;
 }
+.card-item{
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background: sandybrown;
+}
+.card-item:nth-child(1){
+  transform:rotate(45deg);
+}
+.card-item:nth-child(2){
+  transform:rotate(90deg);
+}
+.card-item:nth-child(3){
+  transform:rotate(135deg);
+}
+.card-item:nth-child(3){
+  transform:rotate(135deg);
+}
+

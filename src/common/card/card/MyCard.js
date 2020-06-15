@@ -21,14 +21,12 @@ class MyCard extends React.Component {
 
     return (
         <div className="MyCard">
-          <div className="my-card-item">
-            <img className="my-card-img" src="https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg!0x0.webp"/>
-            <div className="my-card-text">
-              <a>标题1</a>
-              <p>简介简介简介简介简介简介</p>
-            </div>
-          </div>
-          <div style={{clear: 'both'}}></div>
+          <a href="/">
+            <div className="card-item"></div>
+            <div className="card-item"></div>
+            <div className="card-item"></div>
+            <div className="card-item"></div>
+          </a>
         </div>
     )
   }

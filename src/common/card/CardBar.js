@@ -41,19 +41,12 @@ class CardBar extends React.Component {
 
     return (
         <div className="CardBar">
-          <div className="card-box">
-            <div className="card-button-box">
-              <SearchOutlined className="card-search-button"/>
-              <div className="card-search-box">
-                  <input type="text"
-                         className="card-search"
-                         placeholder="请输入你要查询的标签..."/>
-                  <label className="card-search-label">
-                    <SearchOutlined className="card-search-label-button"/>
-                  </label>
-              </div>
-            </div>
-          </div>
+          <ul className="card-bar-box">
+            <li className="card-bar-item"><MyCard/></li>
+            <li className="card-bar-item"><MyCard/></li>
+            <li className="card-bar-item"><MyCard/></li>
+            <li className="card-bar-item"><MyCard/></li>
+          </ul>
         </div>
     )
   }
