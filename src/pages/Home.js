@@ -1,24 +1,23 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Tooltip } from 'antd';
 import {
-  HomeOutlined,
-  UngroupOutlined,
-  TagOutlined,
-  CommentOutlined
+  ArrowUpOutlined,
+  ArrowDownOutlined,
 } from '@ant-design/icons';
 
 import Router from '../router/Router'
-import Bg_1 from '../assets/img/bg-1.jpg'
+import MenuBar from '../common/menu/MenuBar'
 import logo from '../logo.svg'
 import 'antd/dist/antd.css'
 import './Home.css'
 
+import Bg_1 from '../assets/img/bg-1.jpg'
+import Bg_2 from '../assets/img/bg-2.jpg'
+import Bg_3 from '../assets/img/bg-3.jpg'
+
+
 const { Header, Content, Footer } = Layout;
-const homeStyle = {
-  // backgroundImage: `url(${Bg_1})`
-};
+
 
 /**
  * Created by IntelliJ IDEA.
@@ -32,62 +31,59 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      target: null,
-      menuList: [
-        {id: 1, title: '首页', ico: <HomeOutlined/>, path: '/'},
-        {id: 2, title: '标签', ico: <TagOutlined />, path: '/Tag'},
-        {id: 3, title: '分类', ico: <UngroupOutlined/>, path: '/#/'},
-        {id: 4, title: '留言', ico: <CommentOutlined />, path: '/#/'}
-      ]
+      bgList: [
+        {"id": 1, "title": "背景一", "path": Bg_1},
+        {"id": 2, "title": "背景二", "path": Bg_2},
+        {"id": 3, "title": "背景三", "path": Bg_3}
+      ],
+      currentBg: {"id": 1, "path": Bg_1}
     };
-    this.active = this.active.bind(this);
+    this.showBg = this.showBg.bind(this);
   }
 
-  active(event){
+  showBg(event){
 
-    if(this.state.target != null){
-      this.state.target.setAttribute("class", "Menu-item");
-    }
-    const menu = event.target;
-    menu.setAttribute("class", "Menu-item active");
+    let bg = this.state.bgList[event.key - 1];
     this.setState({
-      target: menu
+      currentBg: {"id": bg.id, "path": bg.path}
     })
   }
+
 
   render() {
 
     return (
-        <div className="Home" style={homeStyle}>
+        <div className="Home" style={{backgroundImage: `url(${this.state.currentBg.path})`}}>
           <Layout className="layout">
             <Header className="Home-Header">
               <div className="Home-Menu">
                 <div className="logo">
                   <img className="logo-img" src={logo}/>
                 </div>
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                  {this.state.menuList.map((menu) =>
-                      <Menu.Item key={menu.id}>
-                        <Link to={menu.path}
-                           className='Menu-item'
-                           onClick={this.active}>
-                          {menu.ico}
-                          {menu.title}
-                        </Link>
-                      </Menu.Item>
-                  )}
-                </Menu>
+                <MenuBar bgList={this.state.bgList} showBg={this.showBg} currentBg={this.state.currentBg}/>
               </div>
             </Header>
-            <Content style={{ padding: '0 50px' }}>
+            <Content style={{ padding: '0 30px' }} className="home-content">
               <div className="site-layout-content">
                 <Router></Router>
               </div>
               <div className="site-layout-right">
-                right
+                <div className="home-right">
+                  <a href="#">
+                    <Tooltip title="回到顶部" color={'blue'}>
+                      <ArrowUpOutlined className="home-top"/>
+                    </Tooltip>
+                  </a>
+                  {/*<a href="#">*/}
+                    {/*<Tooltip title="到低部" color={'blue'}>*/}
+                      {/*<ArrowDownOutlined className="home-top"/>*/}
+                    {/*</Tooltip>*/}
+                  {/*</a>*/}
+                  <a className="home-show">100%</a>
+                </div>
               </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>
+            <Footer style={{ textAlign: 'center'}} className="footer">
               chaunz ©2018
             </Footer>
           </Layout>

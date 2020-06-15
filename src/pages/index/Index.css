@@ -5,3 +5,42 @@
   * Time: 12:50
   * Describe:
   */
+.index-box{
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  float: right;
+}
+.index-item{
+  width: 100%;
+  border-radius: 5px;
+  border: rgba(255, 255, 255, 0.4) solid 1px;
+  margin: 10% auto;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.index-item:hover{
+  border: rgb(255, 255, 255) solid 1px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.index-card, .ant-card-head-title{
+  width: 100%;
+  background: none !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.ant-card-body:hover, .ant-card-head-title:hover{
+  color: white !important;
+}
+.ant-card-head{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+.ant-card-head:hover{
+  border-bottom: 1px solid white !important;
+}
+.index-card-sub, .index-card-sub>a{
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  text-decoration: none;
+}
+.index-card-sub>a:hover{
+  color: white;
+}

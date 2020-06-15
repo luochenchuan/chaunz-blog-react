@@ -1,6 +1,10 @@
 import React from 'react';
 
+import CardBar from '../../common/card/CardBar'
+
+import 'antd/dist/antd.css';
 import './Tag.css'
+
 /**
  * Created by IntelliJ IDEA.
  * User: zhuchuansheng
@@ -19,7 +23,9 @@ class Tag extends React.Component {
 
     return (
         <div className="Tag">
-          <h1>tag</h1>
+          <div className="tag-box">
+            <CardBar/>
+          </div>
         </div>
     )
   }
