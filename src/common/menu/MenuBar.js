@@ -33,7 +33,7 @@ class MenuBar extends React.Component {
         {id: 4, title: '留言', ico: <CommentOutlined />, path: '/#/'}
       ],
       bgList: this.props.bgList,
-      currentBg: this.props.currentBg
+      currentBgId: this.props.currentBgId
     };
     this.active = this.active.bind(this);
     this.settingMenu = this.settingMenu.bind(this);
@@ -44,7 +44,7 @@ class MenuBar extends React.Component {
 
   settingMenu(){
 
-    console.log(this.state.currentBg)
+    console.log(this.state.currentBgId);
 
     const switchBg = (
         <span>
@@ -57,12 +57,14 @@ class MenuBar extends React.Component {
         <Menu>
           <SubMenu title={switchBg}  key="1">
             {this.state.bgList.map(bg =>
-                this.state.currentBg.id == bg.id ?
+                this.state.currentBgId == bg.id ?
                 <Menu.Item key={bg.id}
                            style={{backgroundColor: '#1890ff', color: '#fff'}}
                            onClick={this.props.showBg}>{bg.title}</Menu.Item>
                     :
-                <Menu.Item key={bg.id} onClick={this.props.showBg}>{bg.title}</Menu.Item>
+                <Menu.Item key={bg.id} onClick={this.props.showBg}>
+                  {bg.title}
+                </Menu.Item>
             )}
           </SubMenu>
           <Menu.Item key="2">功能二</Menu.Item>

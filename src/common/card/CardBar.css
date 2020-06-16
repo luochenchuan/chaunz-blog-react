@@ -11,10 +11,19 @@
   margin-top: 0;
   margin-left: 6%;
   padding: 0;
-  background: sandybrown;
 }
-.card-bar-item{
+.card-item{
   float: left;
-  margin: 5%;
-  background: aqua;
+  margin: 2%;
+  height: 50px;
+}
+.card-item>a{
+  color: white;
+  padding: 2px 3px;
+}
+.card-title{
+  margin-top: 16%;
+  color: white;
+  text-align: center;
+  font-size: 24px;
 }

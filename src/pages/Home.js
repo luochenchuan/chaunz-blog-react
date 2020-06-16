@@ -36,7 +36,8 @@ class Home extends React.Component {
         {"id": 2, "title": "背景二", "path": Bg_2},
         {"id": 3, "title": "背景三", "path": Bg_3}
       ],
-      currentBg: {"id": 1, "path": Bg_1}
+      currentBg: {"id": 1, "path": Bg_1},
+      ico: 1
     };
     this.showBg = this.showBg.bind(this);
   }
@@ -45,8 +46,8 @@ class Home extends React.Component {
 
     let bg = this.state.bgList[event.key - 1];
     this.setState({
-      currentBg: {"id": bg.id, "path": bg.path}
-    })
+      currentBg: bg
+    });
   }
 
 
@@ -60,7 +61,7 @@ class Home extends React.Component {
                 <div className="logo">
                   <img className="logo-img" src={logo}/>
                 </div>
-                <MenuBar bgList={this.state.bgList} showBg={this.showBg} currentBg={this.state.currentBg}/>
+                <MenuBar bgList={this.state.bgList} showBg={this.showBg} currentBgId={this.state.currentBg.id}/>
               </div>
             </Header>
             <Content style={{ padding: '0 30px' }} className="home-content">
