@@ -5,3 +5,35 @@
   * Time: 12:50
   * Describe:
   */
+.Document{
+  color: white;
+  width: 80%;
+  margin-left: 22%;
+  text-indent: 2em;
+  line-height: 2;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.document-title{
+  font-size: 24px;
+  margin: 10px 0;
+  text-indent: 0;
+}
+.document-sub-title{
+  font-size: 16px;
+  color: #1890ff;
+  text-indent: 4em;
+}
+.document-content{
+  font-size: 14px;
+  padding: 2px 8px;
+}
+.document-content-code{
+  padding: 8px 10px;
+  background: #e9ecef;
+  color: black;
+}
+code{
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  color: #e83e8c;
+  padding: 0 4px;
+}

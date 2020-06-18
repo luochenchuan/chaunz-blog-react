@@ -1,0 +1,21 @@
+/**
+  * Created by IntelliJ IDEA.
+  * User: zhuchuansheng
+  * Date: 2020/6/5
+  * Time: 12:50
+  * Describe:
+  */
+.Classify{
+  color: white;
+}
+.classify-box{
+  margin-top: 5%;
+}
+.classify-item{
+  color: white !important;
+}
+.classify-item-box{
+  width: 90%;
+  height: 80px;
+  background: #7ec1ff;
+}

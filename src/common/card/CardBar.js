@@ -1,10 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Input } from 'antd';
 
-import {
-  SearchOutlined,
-} from '@ant-design/icons';
 import './CardBar.css';
 
 const { Search } = Input;
@@ -22,21 +20,21 @@ class CardBar extends React.Component {
     super(props);
     this.state = {
       tagList: [
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "数据库", "path": "/"},
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "数据库", "path": "/"},
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "java", "path": "/"},
-        {"title": "sql", "path": "/"},
-        {"title": "数据库", "path": "/"}
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "数据库", "path": "/tag/java"},
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "数据库", "path": "/tag/java"},
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "java", "path": "/tag/java"},
+        {"title": "sql", "path": "/tag/java"},
+        {"title": "数据库", "path": "/tag/java"}
       ]
     };
     this.init = this.init.bind(this);
@@ -79,11 +77,11 @@ class CardBar extends React.Component {
         <div className="CardBar">
           <div className="card-title">目前存在 <i className="card-title-i">{this.state.tagList.length}</i> 个标签</div>
           <ul className="card-bar-box" id="cardBarBox">
-            {this.state.tagList.map(tag =>
-                <li className="card-item">
-                  <a className="card-item-link">
+            {this.state.tagList.map((tag, index) =>
+                <li className="card-item" key={index}>
+                  <Link to={tag.path} className="card-item-link">
                     {tag.title}
-                  </a>
+                  </Link>
                 </li>
             )}
           </ul>

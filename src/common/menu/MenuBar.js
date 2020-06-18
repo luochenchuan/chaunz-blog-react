@@ -9,7 +9,9 @@ import {
   CommentOutlined,
   DownOutlined,
   SettingOutlined,
-  BgColorsOutlined
+  BgColorsOutlined,
+  UserOutlined,
+  LoginOutlined
 } from '@ant-design/icons';
 const { SubMenu } = Menu;
 
@@ -28,9 +30,11 @@ class MenuBar extends React.Component {
       target: null,
       menuList: [
         {id: 1, title: '首页', ico: <HomeOutlined/>, path: '/'},
-        {id: 2, title: '标签', ico: <TagOutlined />, path: '/Tag'},
-        {id: 3, title: '分类', ico: <UngroupOutlined/>, path: '/#/'},
-        {id: 4, title: '留言', ico: <CommentOutlined />, path: '/#/'}
+        {id: 2, title: '标签', ico: <TagOutlined />, path: '/tag'},
+        {id: 3, title: '分类', ico: <UngroupOutlined/>, path: '/classify'},
+        {id: 4, title: '留言', ico: <CommentOutlined />, path: '/message'},
+        {id: 5, title: '关于', ico: <UserOutlined />, path: '/about'},
+        {id: 6, title: '登录', ico: <LoginOutlined />, path: '/login'}
       ],
       bgList: this.props.bgList,
       currentBgId: this.props.currentBgId

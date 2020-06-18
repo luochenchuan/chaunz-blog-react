@@ -1,0 +1,28 @@
+/**
+  * Created by IntelliJ IDEA.
+  * User: zhuchuansheng
+  * Date: 2020/6/5
+  * Time: 12:50
+  * Describe:
+  */
+.Login{
+  color: white;
+}
+.login-box{
+  width: 60%;
+  padding: 10%;
+  margin-left: 34%;
+}
+.login-form{
+  width: 90%;
+  margin: 0 auto;
+}
+.ant-form-item-label > label{
+  color: wheat !important;
+}
+.ant-input{
+  /*background: #e9e7e7 !important;*/
+}
+.register{
+  color: #8cc8ff;
+}
